@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 
 // CONNECT TO DATABASE
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
 // ON DB CONNECTION
